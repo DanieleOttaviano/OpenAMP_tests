@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="request-sender" location="/home/daniele/workspace/request-sender" platform="/home/daniele/workspace/zcu104/export/zcu104/zcu104.xpfm" platformUID="xilinx:project_1:project_1:1.0(custom)" systemProject="request-sender_system" sysConfig="zcu104" runtime="C/C++" cpu="linux_psu_cortexa53" cpuInstance="cortex-a53" os="linux">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.linux.exe.debug.1603854020">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.linux.exe.release.719515653" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="linux_hello_world"/>
+</sdkproject:SdkProject>

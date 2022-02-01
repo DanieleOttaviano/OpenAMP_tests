@@ -1,0 +1,51 @@
+2021-09-01T09:56:32.24255200255-09:56:32 **** Incremental Build of configuration Debug for project firmware_rpu ****
+000-make all 
+000-Building file: ../src/rpmsg-echo.c
+000-Invoking: ARM R5 gcc compiler
+000-armr5-none-eabi-gcc -DARMR5 -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/rpmsg-echo.o" -mcpu=cortex-r5 -mfloat-abi=hard  -mfpu=vfpv3-d16 -I/home/daniele/workspace/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bspinclude/include -MMD -MP -MF"src/rpmsg-echo.d" -MT"src/rpmsg-echo.o" -o "src/rpmsg-echo.o" "../src/rpmsg-echo.c"
+000-In file included from ../src/rpmsg-echo.c:7:
+000/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bspinclude/include/xtime_l.h70-1-1#pragma message: For the sleep routines, CortexR5 PMU cycle counter is used0-/home/daniele/workspace/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bspinclude/include/xtime_l.h:70:9: note: #pragma message: For the sleep routines, CortexR5 PMU cycle counter is used
+000-   70 | #pragma message ("For the sleep routines, CortexR5 PMU cycle counter is used")
+000-      |         ^~~~~~~
+000-../src/rpmsg-echo.c: In function 'TaskManager':
+000/firmware_rpu/src/rpmsg-echo.c165-1-1implicit declaration of function 'printf' [-Wimplicit-function-declaration]1-../src/rpmsg-echo.c:165:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+000-  165 |    printf("\n[RPU]: Unexpected shutdown.\n");
+000-      |    ^~~~~~
+000/firmware_rpu/src/rpmsg-echo.c165-1-1incompatible implicit declaration of built-in function 'printf'1-../src/rpmsg-echo.c:165:4: warning: incompatible implicit declaration of built-in function 'printf'
+000/firmware_rpu/src/rpmsg-echo.c19-1-1include '<stdio.h>' or provide a declaration of 'printf'0-../src/rpmsg-echo.c:19:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+000-   18 | #include "RPU_task.h"
+000-  +++ |+#include <stdio.h>
+000-   19 | 
+000/firmware_rpu/src/rpmsg-echo.c202-1-1passing argument 6 of 'xTaskCreate' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]1-../src/rpmsg-echo.c:202:79: warning: passing argument 6 of 'xTaskCreate' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+000-  202 |       configMINIMAL_STACK_SIZE, NULL, Task_vector[j].priority , Task_vector[j].Handler);
+000-      |                                                                 ~~~~~~~~~~~~~~^~~~~~~~
+000-In file included from ../src/rpmsg-echo.c:16:
+000/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bspinclude/include/task.h335-1-1expected 'struct tskTaskControlBlock ** const' but argument is of type 'struct tskTaskControlBlock * const*'0-/home/daniele/workspace/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bspinclude/include/task.h:335:29: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'struct tskTaskControlBlock * const*'
+000-  335 |        TaskHandle_t * const pxCreatedTask ) PRIVILEGED_FUNCTION;
+000-      |        ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+000-../src/rpmsg-echo.c: In function 'processing':
+000/firmware_rpu/src/rpmsg-echo.c264-1-1passing argument 1 of 'platform_init' makes integer from pointer without a cast [-Wint-conversion]1-../src/rpmsg-echo.c:264:20: warning: passing argument 1 of 'platform_init' makes integer from pointer without a cast [-Wint-conversion]
+000-  264 |  if (platform_init(NULL, NULL, &platform)) {
+000-      |                    ^~~~
+000-      |                    |
+000-      |                    void *
+000-In file included from ../src/rpmsg-echo.c:12:
+000/firmware_rpu/src/platform_info.h46-1-1expected 'int' but argument is of type 'void *'0-../src/platform_info.h:46:23: note: expected 'int' but argument is of type 'void *'
+000-   46 | int platform_init(int argc, char *argv[], void **platform);
+000-      |                   ~~~~^~~~
+000-Finished building: ../src/rpmsg-echo.c
+000- 
+000-Building target: firmware_rpu.elf
+000-Invoking: ARM R5 gcc linker
+000-armr5-none-eabi-gcc -mcpu=cortex-r5 -mfloat-abi=hard -mfpu=vfpv3-d16 -Wl,-T -Wl,../src/lscript.ld -L/home/daniele/workspace/zcu102_1/export/zcu102_1/sw/zcu102_1/domain_psu_cortexr5_0/bsplib/lib -o "firmware_rpu.elf"  ./src/RPU_task.o ./src/helper.o ./src/platform_info.o ./src/rpmsg-echo.o ./src/rsc_table.o ./src/simple.o ./src/zynqmp_r5_a53_rproc.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lopen_amp,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lmetal,-lgcc,-lc,--end-group
+000-Finished building target: firmware_rpu.elf
+000- 
+000-Invoking: ARM R5 Print Size
+000-armr5-none-eabi-size firmware_rpu.elf  |tee "firmware_rpu.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000- 101136	   5412	  99664	 206212	  32584	firmware_rpu.elf
+000-Finished building: firmware_rpu.elf.size
+000- 
+00255-
+09:56:32 Build Finished (took 639ms)
+

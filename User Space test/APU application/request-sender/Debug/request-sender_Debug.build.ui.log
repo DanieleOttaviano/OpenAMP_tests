@@ -1,0 +1,13 @@
+2022-01-03T17:06:37.18888300255-17:06:37 **** Incremental Build of configuration Debug for project request-sender ****
+000-make all 
+000-Building file: ../src/helper.c
+000-Invoking: ARM v8 Linux gcc compiler
+000-aarch64-linux-gnu-gcc -Wall -O0 -g -c -fmessage-length=0 -MT"src/helper.o" -MMD -MP -MF"src/helper.d" -MT"src/helper.o" -o "src/helper.o" "../src/helper.c"
+000/request-sender/src/helper.c12-1-1fatal error: metal/sys.h: No such file or directory2-../src/helper.c:12:10: fatal error: metal/sys.h: No such file or directory
+000-   12 | #include <metal/sys.h>
+000-      |          ^~~~~~~~~~~~~
+000-compilation terminated.
+000/request-sender0-1-1make: *** [src/subdir.mk:38: src/helper.o] Error 12-make: *** [src/subdir.mk:38: src/helper.o] Error 1
+00255-
+17:06:37 Build Finished (took 454ms)
+

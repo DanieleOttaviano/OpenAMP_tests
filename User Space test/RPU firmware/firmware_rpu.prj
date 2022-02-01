@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="firmware_rpu" location="/home/daniele/workspace/firmware_rpu" platform="/home/daniele/workspace/zcu102_1/export/zcu102_1/zcu102_1.xpfm" platformUID="xilinx:zcu102::0.0(custom)" systemProject="firmware_rpu_system" sysConfig="zcu102_1" runtime="cpp" cpu="domain_psu_cortexr5_0" cpuInstance="psu_cortexr5_0" os="freertos10_xilinx" mssSignature="ca02b28e500007e55e30ed6e780b12da">
+  <configuration name="Debug" id="xilinx.gnu.arm.r5.exe.debug.518747051">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.r5.exe.release.109088693" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="openamp_echo_test" hasBspSettings="true"/>
+</sdkproject:SdkProject>
