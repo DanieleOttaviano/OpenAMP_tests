@@ -56,24 +56,25 @@ Once the Virtual Machine Manager is installed download the Ubuntu 20.04 ISO imag
 Create a new Ubuntu Virtual Machine using the downloaded ISO (The example is done on VirtualBox, but it is similar on other VM Managers). Open VirtualBox, click on **New**, and compile the widget. Choose **Linux** as type and **Ubuntu(64bit)** as Version. Then assign the quantity of RAM to the virtual machine. I decided to assign 4GB but if you have 8GB is better.
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\env1.png" alt="Immagine 2021-10-25 125711" style="zoom:50%;" />
+<img src="/../main/images/env1.png" width=50% height=50%" />
 </p>
 
 
 Click Create. Now choose the quantity of disk reserved for the VM, the more the better. Unfortunately, you need to install a lot of software so I suggest you give 200GB (100GB if you don't want to use OpenAMP in User Space). 
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\env2.png" alt="Immagine 2021-10-25 130028" style="zoom:50%;" />
+<img src="/../main/images/env2.png" width=50% height=50%" />
 </p>
 
 
 Click Create again. Finally, **start** the VM. Once started the VM, choose the start-up disk. You can insert the ISO image downloaded before.
 
+
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\env3.png" alt="env3" style="zoom:50%;" />
+<img src="/../main/images/env3.png" width=50% height=50%" />
 </p>
 
-
+							 
 Click **Choose** and then **Start**, then complete the Ubuntu installation. 
 
 
@@ -186,9 +187,8 @@ sudo gedit /etc/bash.bashrc
 Once you have the script open, add the command for sourcing the appropriate file. In my case:
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\Petalinux1.png" alt="Petalinux1" style="zoom:70%;" />
+<img src="/../main/images/Petalinux1.png" width=50% height=50%" />
 </p>
-
 
 
 ## Install Vitis
@@ -325,7 +325,7 @@ It is possible to run the same example applications shown in the previous sectio
    Prepare the board to load from SD changing the switch configuration as needed (In my case I use the zcu104):  
 
    <p align="center">
-   <img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\scheda1.jpg" alt="scheda1" style="zoom:50%;" />
+   <img src="/../main/images/scheda1.jpg" width=50% height=50%" />
    </p>
 
 
@@ -339,14 +339,14 @@ It is possible to run the same example applications shown in the previous sectio
    Download a program (like *Tera Term* or any other) on your host to receive data from a serial port with a baud rate speed equal to 115200 (In my case the port is COM9 but it probably changes for you):
 
    <p align="center">
-   <img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\scheda3.png" alt="scheda3" style="zoom:40%;" />
+   <img src="/../main/images/scheda3.png" width=50% height=50%" />
    </p>
 
 
    Finally connect the board to your PC via USB:
 
    <p align="center">
-   <img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\scheda2.jpg" alt="scheda2" style="zoom:50%;" />
+   <img src="/../main/images/scheda2.jpg" width=50% height=50%" />
    </p>
 
 
@@ -396,7 +396,7 @@ There are two ways to use OpenAMP in Xilinx Zynq Ultrascale+. The first is calle
 - **Kernel Space**: 
 
   <p align="center">
-  <img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\KernelSpace.png" alt="KernelSpace" style="zoom:60%;" />
+  <img src="/../main/images/KernelSpace.png" width=50% height=50%" />
   </p>
 
 
@@ -405,7 +405,7 @@ There are two ways to use OpenAMP in Xilinx Zynq Ultrascale+. The first is calle
 - **User Space**:
 
   <p align="center">
-  <img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\UserSpace.png" alt="UserSpace" style="zoom:60%;" />
+  <img src="/../main/images/UserSpace.png" width=50% height=50%" />
   </p>
 
 
@@ -471,20 +471,20 @@ Let's see how does OpenAMP works. First, you should have in mind the communicati
 6. After initializing the framework, the communication can start through the *rpmsg_send()* function and *I/O callback* functions using the RPMsg channel created. 
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code1.png" alt="code1" style="zoom:80%;" />
+<img src="/../main/images/code1.png" width=50% height=50%" />
 </p>
 
 Once the flow is clear you can see the application code running on RPU starting from the *main* function.
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code2.png" alt="code2" style="zoom:50%;" />
+<img src="/../main/images/code2.png" width=50% height=50%" />
 </p>
 
 
 It simply creates a freeRTOS task and starts the scheduler. The task runs the *processing()* function 
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code2_2.png" alt="code2_2" style="zoom:50%;" />
+<img src="/../main/images/code2_2.png" width=50% height=50%" />
 </p>
 
 
@@ -504,7 +504,7 @@ Then the function *platform_create_rpmsg_vdev()*:
 Then if nothing went wrong it start the *app()* function.
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code3.png" alt="code3" style="zoom:70%;" />
+<img src="/../main/images/code3.png" width=50% height=50%" />
 </p>
 
 
@@ -520,7 +520,7 @@ Therefore, using the function *platform_poll()* the application waits for an int
 When the interrupt occurs, if it is addressed to the right endpoint, the callback is executed:
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code4.png" alt="code4" style="zoom:70%;" />
+<img src="/../main/images/code4.png" width=50% height=50%" />
 </p>
 
 
@@ -531,7 +531,7 @@ The callback does a check on the data to verify if it is a Shutdown message. If 
 In order to fix this error modify the file *helper.c* commenting the initialization of the interrupt controller driver:
 
 <p align="center">
-<img src="C:\Users\danie\OneDrive - Università di Napoli Federico II\Università\Dottorato\guide\OpenAMP guide\Immagini\code5.png" alt="code5" style="zoom:50%;" />
+<img src="/../main/images/code5.png" width=50% height=50%" />
 </p>
 
 
