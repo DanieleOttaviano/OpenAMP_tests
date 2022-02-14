@@ -1039,7 +1039,7 @@ Image Packaging Configuration  ---> Root filesystem type ---> EXT4 (SD/eMMC/SATA
 
 Therefore, add the following device tree content to *\<petalinux project>/project-spec/meta-user/recipes-bsp/device-tree/file/system-user.dtsi* (The libmetal Linux demo uses Userspace I/O (UIO) devices for IPI and shared memory).
 
-N.B.: the name definitions (shm@3ed20000 and ipi@ff340000) must be compliant with the ones defined in the RPU firmware (file "*rsc_table.c*").
+N.B.: the name definitions (shm@3ed20000 and ipi@ff340000) must be compliant with those defined in the "platform_info.c" file in the APU userspace code.
 
 ```fallback
 /include/ "system-conf.dtsi"
