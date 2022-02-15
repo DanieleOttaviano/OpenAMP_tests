@@ -905,7 +905,7 @@ In this case we are going to use Vitis to build the application. You can find th
 
   * platform_info.c and platform_info.h define platform specifc data and implement API’s to set platform specific information for OpenAMP. 
     *  https://github.com/OpenAMP/open-amp/blob/master/apps/machine/zynqmp/platform_info.c 
-    *  https://github.com/OpenAMP/open-amp/blob/master/apps/machine/zynqmp/platform_info.ch
+    *  https://github.com/OpenAMP/open-amp/blob/master/apps/machine/zynqmp/platform_info.h
 
   * rsc_table.c and rsc_table.h populate the resource table for the remote core for use by the Linux master. 
     * https://github.com/OpenAMP/open-amp/blob/master/apps/machine/zynqmp_r5/rsc_table.c 
